@@ -22,6 +22,18 @@ public class YoseGame {
             return new ModelAndView(new Object(), "index.ftl");
         }, new FreeMarkerEngine());
     	
+    	get("/readMe/", (request, response) -> {
+    		response.type("text/html");
+    		
+            return new ModelAndView(new Object(), "readMe.ftl");
+        }, new FreeMarkerEngine());
+    	
+    	get("/contactMe/", (request, response) -> {
+    		response.type("text/html");
+    		
+            return new ModelAndView(new Object(), "contact-me-link.ftl");
+        }, new FreeMarkerEngine());
+    	
     	get("/ping", (request, response) -> {
     		response.type("application/json");
     		
