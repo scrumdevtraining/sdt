@@ -12,5 +12,19 @@
 	<h3 id='ship-3'>Ship 3</h3>
 </div>
 
+
+<h1>Ship</h1>
+<p id="ship">--none--</p>
+
+Ship: <input type="text" id="myText" value="Falcon">
+<button onclick="myFunction()">Dock</button>
+
+<script>
+function myFunction() {
+   var x = document.getElementById("myText").value;
+   document.getElementById("ship").innerHTML = x;
+}
+</script>
+
 </body>
 </html>
