@@ -1,5 +1,7 @@
 package yose;
 
+import java.lang.reflect.Array;
+
 public class Status {
 	private boolean alive;
 	
@@ -14,4 +16,7 @@ public class Status {
 	public void setAlive(boolean alive) {
 		this.alive = alive;
 	}
+	
+
+	
 }
