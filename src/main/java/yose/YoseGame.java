@@ -37,7 +37,7 @@ public class YoseGame {
     	get("/astroport", (request, response) -> {
     		response.type("text/html");
     		
-            return new ModelAndView(new Object(), "astroport.ftl");
+            return new ModelAndView(new Object(), "astroport-name.ftl");
         }, new FreeMarkerEngine());
     	
     	get("/ping", (request, response) -> {
