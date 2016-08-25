@@ -12,6 +12,7 @@ import spark.template.freemarker.FreeMarkerEngine;
 import com.google.gson.Gson;
 
 public class YoseGame {
+
 	public static void main(String[] args) {
 		port(getHerokuAssignedPort());
 
@@ -34,6 +35,12 @@ public class YoseGame {
 
 			return new ModelAndView(new Object(), "contact-me-link.ftl");
 		}, new FreeMarkerEngine());
+
+		get("/astroport", (request, response) -> {
+    		response.type("text/html");
+    		
+            return new ModelAndView(new Object(), "astroport-name.ftl");
+        }, new FreeMarkerEngine());
 
 		get("/ping", (request, response) -> {
 			response.type("application/json");
