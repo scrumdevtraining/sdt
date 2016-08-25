@@ -14,15 +14,15 @@
 
 
 <h1>Ship</h1>
-<p id="ship">--none--</p>
+<p id="shipName">--none--</p>
 
-Ship: <input type="text" id="myText" value="Falcon">
-<button onclick="myFunction()">Dock</button>
+Ship: <input type="text" id="ship" value="Falcon">
+<button id="dock" onclick="myFunction()">Dock</button>
 
 <script>
 function myFunction() {
-   var x = document.getElementById("myText").value;
-   document.getElementById("ship").innerHTML = x;
+   var x = document.getElementById("ship").value;
+   document.getElementById("shipName").innerHTML = x;
 }
 </script>
 
