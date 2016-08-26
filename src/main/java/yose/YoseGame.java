@@ -75,7 +75,7 @@ public class YoseGame {
 //			}
 
 			int j = 2;
-			while(j <=500){
+			while(j <=3000){
 				if (isPrime(j)){
 					int intResult = input%j;
 					int intResult2 = input/j;
