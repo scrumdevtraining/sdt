@@ -1,3 +1,3 @@
 YoseTheGame
 ===========
-This is SDT
+This is SDT Scrum Development Team
