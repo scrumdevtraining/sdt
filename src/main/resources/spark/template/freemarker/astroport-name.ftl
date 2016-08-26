@@ -22,10 +22,10 @@ background-color: green;
 <div id='gate-1' class='free'>
  <h3 id='ship-1'>Ship 1</h3>
 </div>
-<div id='gate-2'>
+<div id='gate-2' class='free'>
  <h3 id='ship-2'>Ship 2</h3>
 </div>
-<div id='gate-3'>
+<div id='gate-3' class='free'>
  <h3 id='ship-3'>Ship 3</h3>
 </div>
 
