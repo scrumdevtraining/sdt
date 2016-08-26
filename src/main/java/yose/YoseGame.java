@@ -53,14 +53,18 @@ public class YoseGame {
 
 			String stNumber = request.queryParams("number");
 			System.out.println("result:" +stNumber);
-//			if (stNumber.equals("")) {
-//				stNumber = "0";
-//			}
 			
 			List<Integer> arrStr = new ArrayList<>();
 			
 			int power = 1;
-			int input = Integer.parseInt(stNumber);
+			int input = 0;
+			
+			try{
+				input = Integer.parseInt(stNumber);
+			}catch (NumberFormatException ex){
+				return new DecompositionError(stNumber+"","not a number");
+			}
+			
 			while(power <= input/2){
 				power = power*2;
 				arrStr.add(2);
