@@ -38,17 +38,23 @@ Ship: <input type="text" id="ship" value="Falcon" onkeypress="changeName()">
 <button id="dock" onclick="myFunction()">Dock</button>
 
 <script>
+var counter = 0;
 function myFunction() {
    var x = document.getElementById("ship").value;
    document.getElementById("ship-1").innerHTML = x;
    document.getElementById("gate-1").className = "occupied";
-   document.getElementById("info").className = "docked";
+   if(counter>0){
+   	document.getElementById("info").className = "hidden";
+   }else{
+   	document.getElementById("info").className = "docked";
+   }
    document.getElementById("information").innerHTML = "Ship 1 docked here";
+   counter ++;
 }
 
 function changeName() {
    document.getElementById("information").innerHTML = "Typingggg.....";
-    document.getElementById("info").className = "hidden";
+   document.getElementById("info").className = "hidden";
 }
 </script>
 
