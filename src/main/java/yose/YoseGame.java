@@ -61,15 +61,45 @@ public class YoseGame {
 			
 			try{
 				input = Integer.parseInt(stNumber);
+				System.out.println("xxxxxxxxxxxxxxxxxx: "+input);
 			}catch (NumberFormatException ex){
 				return new DecompositionError(stNumber+"","not a number");
 			}
 			
-			while(power <= input/2){
-				power = power*2;
-				arrStr.add(2);
-			}
+			//For powerOf2 function
+//			while(power <= input/2){
+//				power = power*2;
+//				arrStr.add(2);
+//			}
 
+			int j = 2;
+			while(j <=500){
+				if (isPrime(j)){
+					int intResult = input%j;
+					int intResult2 = input/j;
+//					if(intResult==1){
+//						arrStr.add(j);
+//						break;
+//					}else{
+						if(intResult==0){
+							arrStr.add(j);
+							
+							
+							if(intResult==1){
+								break;
+							}
+							
+							input = intResult2;
+						}else{
+							j++;							
+						}
+							
+
+				}else{
+					j++;
+				}
+				
+			}
 				return new Decomposition(input,arrStr);
 			}, gson::toJson);
 
@@ -106,4 +136,11 @@ public class YoseGame {
 		return value * getPositivePower(x, pow - currentPow);
 	}
 
+	public static boolean isPrime(int n) {
+	    for(int i=2;i<n;i++) {
+	        if(n%i==0)
+	            return false;
+	    }
+	    return true;
+	}
 }
