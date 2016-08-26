@@ -48,6 +48,12 @@ public class YoseGame {
 			return new Status(true);
 		}, gson::toJson);
 
+		get("/minesweeper", (request, response) -> {
+    		response.type("text/html");
+    		
+            return new ModelAndView(new Object(), "minesweeper.ftl");
+        }, new FreeMarkerEngine());            
+                
 		get("/primeFactors", (request, response) -> {
 			response.type("application/json");
 
