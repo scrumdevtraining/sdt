@@ -49,11 +49,11 @@ function myFunction() {
    	document.getElementById("info").className = "docked";
    }
    document.getElementById("information").innerHTML = "Ship 1 docked here";
-   counter ++;
+   counter += 1;
 }
 
 function changeName() {
-   document.getElementById("information").innerHTML = "Typingggg.....";
+   document.getElementById("information").innerHTML = "Typingggg......";
    document.getElementById("info").className = "hidden";
 }
 </script>
