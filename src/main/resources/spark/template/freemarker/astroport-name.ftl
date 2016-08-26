@@ -41,8 +41,8 @@ Ship: <input type="text" id="ship" value="Falcon" onkeypress="changeName()">
 function myFunction() {
    var x = document.getElementById("ship").value;
    document.getElementById("ship-1").innerHTML = x;
-   document.getElementById("gate-1").className += " occupied";
-   document.getElementById("info").className += " docked";
+   document.getElementById("gate-1").className = "occupied";
+   document.getElementById("info").className = "docked";
    document.getElementById("information").innerHTML = "Ship 1 docked here";
 }
 
