@@ -47,7 +47,6 @@ function myFunction() {
 }
 
 function changeName() {
-   document.getElementById("info").className += " hidden";
    document.getElementById("information").innerHTML = "Typingggg.....";
 }
 </script>
