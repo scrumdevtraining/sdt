@@ -48,12 +48,6 @@ public class YoseGame {
 			return new Status(true);
 		}, gson::toJson);
 
-		get("/minesweeper", (request, response) -> {
-    		response.type("text/html");
-    		
-            return new ModelAndView(new Object(), "minesweeper.ftl");
-        }, new FreeMarkerEngine());            
-                
 		get("/primeFactors", (request, response) -> {
 			response.type("application/json");
 
@@ -64,9 +58,11 @@ public class YoseGame {
 			
 			int power = 1;
 			int input = 0;
+			int input2 = 0;
 			
 			try{
 				input = Integer.parseInt(stNumber);
+				input2 = input;
 				System.out.println("xxxxxxxxxxxxxxxxxx: "+input);
 			}catch (NumberFormatException ex){
 				return new DecompositionError(stNumber+"","not a number");
@@ -83,13 +79,9 @@ public class YoseGame {
 				if (isPrime(j)){
 					int intResult = input%j;
 					int intResult2 = input/j;
-//					if(intResult==1){
-//						arrStr.add(j);
-//						break;
-//					}else{
+
 						if(intResult==0){
 							arrStr.add(j);
-							
 							
 							if(intResult==1){
 								break;
@@ -106,7 +98,7 @@ public class YoseGame {
 				}
 				
 			}
-				return new Decomposition(input,arrStr);
+				return new Decomposition(input2,arrStr);
 			}, gson::toJson);
 
 	}
